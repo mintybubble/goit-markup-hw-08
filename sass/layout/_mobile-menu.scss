@@ -1,0 +1,129 @@
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-white-colour);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms ease 250ms, visibility 250ms ease 250ms;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding: 48px 40px;
+
+  margin: 0;
+}
+.mobile-menu-close-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: var(--primary-white-colour);
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-colour);
+  }
+}
+
+.mobile-nav {
+  margin-bottom: 300px;
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--secondary-text-colour);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-colour);
+  }
+
+  &__list:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mobile-contacts {
+  margin-bottom: 64px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  & .link {
+    text-decoration: none;
+  }
+  &__tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent-colour);
+  }
+  &__email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-colour);
+  }
+}
+
+.mobile-social-links {
+  display: flex;
+  position: relative;
+
+  &__link {
+    text-decoration: none;
+    color: var(--accent-colour);
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 22px;
+      width: 0px;
+      right: -10px;
+      top: 0;
+
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+}
