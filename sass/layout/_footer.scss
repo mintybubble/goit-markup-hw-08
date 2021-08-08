@@ -52,6 +52,12 @@
     margin-bottom: 8px;
   }
 
+  @media screen and (min-width: 1200px) {
+    .contacts-bottom__item:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
   & .address {
     color: var(--primary-white-colour);
     font-style: normal;
@@ -69,8 +75,6 @@
 
     @media screen and (min-width: 1200px) {
       display: inline-block;
-
-      margin-top: 9px;
     }
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
